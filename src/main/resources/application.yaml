@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: payment-api
+  datasource:
+    url: jdbc:postgresql://localhost:5432/payment_api
+    username: payment_api
+    password: payment_api
+  jpa:
+    hibernate:
+      ddl-auto: update
+    open-in-view: false

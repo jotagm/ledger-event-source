@@ -1,0 +1,15 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: payment_api
+      POSTGRES_USER: payment_api
+      POSTGRES_PASSWORD: payment_api
+    ports:
+      - "5432:5432"
+    volumes:
+      - payment-api-postgres-data:/var/lib/postgresql/data
+
+volumes:
+  payment-api-postgres-data:
